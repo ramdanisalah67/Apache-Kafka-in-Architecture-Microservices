@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>Kafka-Parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - Kafka-Parent</name>
+  <url>http://maven.apache.org</url>
+    <modules>
+        <module>Microservice-Consumer</module>
+      <module>Microservice-Producer</module>
+    </modules>
+    <packaging>pom</packaging>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Define common dependencies with versions -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.2</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.kafka</groupId>
+        <artifactId>spring-kafka</artifactId>
+        <version>3.1.2</version>
+      </dependency>
+      <!-- Add other common dependencies and their versions -->
+    </dependencies>
+  </dependencyManagement>
+</project>
